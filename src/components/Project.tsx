@@ -113,7 +113,7 @@ const Project = () => {
             ))}
           </div>
 
-          <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-14 gap-y-14 md:mx-20 lg:mx-14 '>{(!(btnCategory === "All")) &&
+          <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-14 gap-y-14 mt-6 mx-8 md:mx-20 lg:mx-14 '>{(!(btnCategory === "All")) &&
             (projectSecData.filter(((arr: { category: string }) => (arr.category === btnCategory))))
               .map((item: ProjectData) => (
                 <ProjectCard

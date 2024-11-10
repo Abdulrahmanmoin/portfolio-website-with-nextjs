@@ -34,10 +34,11 @@ const Skill = () => {
     return (
         <section id="skills" className='bg-white'>
             <div className="flex flex-col">
-                <h2 className='capitalize text-4xl sm:text-5xl font-bold py-20 text-center leading-[4rem]'>Skills</h2>
-                <div data-aos="zoom-in-up"
+                <h2  className='capitalize text-4xl sm:text-5xl font-bold py-20 text-center leading-[4rem]'>Skills</h2>
+                <div
+                    data-aos="zoom-in-up"
                     data-aos-anchor-placement="center-bottom"
-                    className="grid grid-cols-2 sm:grid-cols-3 md:mx-28 lg:mx-60 gap-y-10 gap-x-0 justify-center flex-wrap">
+                    className="grid grid-cols-2 sm:grid-cols-3 md:mx-28 lg:mx-60 gap-y-5 gap-x-0 justify-center flex-wrap">
                     {skillsData.map(item => (
                         <div
                             key={item.title}

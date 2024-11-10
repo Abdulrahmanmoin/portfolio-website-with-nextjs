@@ -9,7 +9,7 @@ const Contact = () => {
                 <div className='flex flex-col items-center'>
                     <h2 className='capitalize text-4xl sm:text-5xl font-bold py-20 text-center leading-[4rem]'>Take a <span className='text-blue-800'> coffee </span> & <span className='text-blue-800'> Connect </span> with me</h2>
 
-                    <div className='flex gap-10 mb-6'>
+                    <div className='flex flex-col lg:flex-row  gap-10 mb-6'>
                         <Link
                             href="mailto:iam.armoin@gmail.com"
                             className='p-5  bg-pink-50  rounded-lg'

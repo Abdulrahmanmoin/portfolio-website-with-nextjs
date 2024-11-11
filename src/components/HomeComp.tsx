@@ -59,7 +59,7 @@ const HomeComp = () => {
 
       {/* Links for social ids */}
       <div>
-        <SocialIcons className='bg-transparent absolute mt-60' />
+        <SocialIcons className='bg-transparent absolute hidden sm:block sm:mt-28 md:mt-40 lg:mt-52 xl:mt-60' />
       </div>
 
 

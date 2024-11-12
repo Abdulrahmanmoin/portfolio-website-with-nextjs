@@ -34,10 +34,10 @@ const ContactForm = () => {
     }
 
     emailjs.send(serviceId, templateId, templateParams, publicKey)
-      .then((res) => {
+      .then(() => {
         console.log('Message Sent successfully!');
       })
-      .catch((e) =>{
+      .catch(() =>{
         console.log("Email was not sent.");
       })
       

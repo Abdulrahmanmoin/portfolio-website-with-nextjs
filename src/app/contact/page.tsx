@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import ContactForm from './ContactForm'
-import SocialIcons from './SocialIcons'
+import ContactForm from '@/components/ContactForm'
+import SocialIcons from '@/components/SocialIcons'
 
 const Contact = () => {
     return (

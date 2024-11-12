@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import AOSWrapper from './AOSWrapper'
-import SocialIcons from './SocialIcons'
+import AOSWrapper from '@/components/AOSWrapper'
+import SocialIcons from '@/components/SocialIcons'
 
 const About = () => {
 
@@ -30,7 +30,7 @@ const About = () => {
 
     return (
         <>
-            <section id='about' className='bg-white mb-10'>
+            <section id='about' className='bg-white '>
                 <div>
                     <div className='flex flex-col items-center'>
                         <h2 className='capitalize text-4xl sm:text-5xl font-bold py-20 text-center leading-[4rem]'>I Know that <span className='text-blue-800'> Good Apps </span> <br /> means Good Business</h2>

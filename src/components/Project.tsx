@@ -10,7 +10,6 @@ const Project = () => {
 
   useEffect(() => {
 
-    console.log(btnCategory);
   }, [btnCategory])
 
 

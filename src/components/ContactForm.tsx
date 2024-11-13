@@ -22,9 +22,10 @@ const ContactForm = () => {
     setSendButtonText("Sending...")
 
 
-    const serviceId: string = "service_p8pkagl"
-    const templateId: string = "template_7u59yyu"
-    const publicKey: string = "GpjpI62v0fgeP1BAF"
+    const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID || "";
+    const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID || "";
+    const publicKey = process.env.NEXT_PUBLIC_PUBLIC_KEY || "";
+
 
     const templateParams = {
       from_name: userName,
@@ -37,10 +38,10 @@ const ContactForm = () => {
       .then(() => {
         console.log('Message Sent successfully!');
       })
-      .catch(() =>{
+      .catch(() => {
         console.log("Email was not sent.");
       })
-      
+
   };
 
 

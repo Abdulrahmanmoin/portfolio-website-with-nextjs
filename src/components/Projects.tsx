@@ -3,10 +3,11 @@
 import React, { useEffect, useState } from 'react'
 import ProjectCard from './ProjectCard'
 import SocialIcons from './SocialIcons'
+import { Button } from './ui/button'
 
-const Project = () => {
+const Projects = () => {
 
-  const [btnCategory, setBtnCategory] = useState("All")
+  const [btnCategory, setBtnCategory] = useState("Next.js")
 
   useEffect(() => {
 
@@ -87,7 +88,7 @@ const Project = () => {
 
 
   return (
-    <section id='projects' className='mb-20'>
+    <section id='projects' className='bg-white'>
       <div>
         <div className='flex flex-col items-center justify-center'>
           <h2 className='capitalize text-4xl sm:text-5xl font-bold py-20 text-center leading-[4rem]'>My Creative  <span className='text-blue-800'> Portfolio </span> Section </h2>
@@ -96,11 +97,12 @@ const Project = () => {
           {/*  buttons */}
           <div className='flex gap-14 flex-wrap justify-center'>
             {categories.map(category => (
-              <button
+              <Button
                 key={category}
+                variant="outline"
                 onClick={() => setBtnCategory(category)}
-                className='bg-white hover:bg-blue-800 hover:text-white font-semibold px-7 py-3 rounded-xl '
-              >{category}</button>
+                className='bg-gray-200 text-black border-[1px] border-black hover:bg-blue-800 hover:text-white font-semibold px-7 py-3 rounded-xl '
+              >{category}</Button>
             ))}
           </div>
 
@@ -129,4 +131,4 @@ const Project = () => {
   )
 }
 
-export default Project
+export default Projects

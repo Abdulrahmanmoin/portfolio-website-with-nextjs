@@ -4,15 +4,18 @@ import { ReactNode, FC, useEffect } from 'react';
 import 'aos/dist/aos.css';
 
 interface AOSWrapperProps {
-    children : ReactNode;
+  children: ReactNode;
 }
 
-const AOSWrapper: FC<AOSWrapperProps> = ({children}) => {
+const AOSWrapper: FC<AOSWrapperProps> = ({ children }) => {
 
-    useEffect(() => {
-        AOS.init({ duration: 1000 });
-    }, [])
-    
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      // once: true, // Whether animation should happen only once
+    })
+  }, [])
+
   return (
     <div>
       {children}

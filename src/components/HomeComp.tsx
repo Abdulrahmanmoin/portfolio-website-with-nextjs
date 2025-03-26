@@ -70,7 +70,7 @@ const HomeComp = () => {
         <div className=''>
           <div className="tech-stack-and-mid-ball-div w-full grid grid-cols-3 items-center text-center justify-items-center ">
 
-            <div data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="800" className='nextjs-box bg-white w-32 sm:w-44 md:w-52 rounded-full ml-28 sm:ml-40 md:ml-52'>
+            <div data-aos="zoom-in-right" data-aos-easing="linear" data-aos-duration="800" data-aos-offset="0" className='nextjs-box bg-white w-32 sm:w-44 md:w-52 rounded-full ml-28 sm:ml-40 md:ml-52'>
               <Image src={"/assets/nextjs.png"} alt='next.js' width={100} height={100} loading='lazy' className='nextjs-img w-32 sm:w-44 md:w-72 p-3 sm:p-5 md:p-6' />
 
             </div>
@@ -91,10 +91,10 @@ const HomeComp = () => {
 
 
 
-           {/* tailwind img */}
+            {/* tailwind img */}
 
             <div data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="800" className="tailwind-box bg-white rounded-full w-8 sm:hidden">
-            <Image src={"/assets/tailwind.png"} alt='tailwind CSS' width={100} height={100} loading='lazy' className='tailwind-img w-8 p-1' />
+              <Image src={"/assets/tailwind.png"} alt='tailwind CSS' width={100} height={100} loading='lazy' className='tailwind-img w-8 p-1' />
             </div>
 
 
@@ -104,8 +104,9 @@ const HomeComp = () => {
                 <Image src={"/assets/typescript.png"} alt='typescript' width={100} height={100} loading='lazy' className='typescript-img w-16 sm:w-24 md:w-32 p-3 sm:p-4 md:p-5' />
               </div>
 
-              <div data-aos="zoom-in-left" data-aos-easing="linear" data-aos-duration="800" className='react-box bg-white w-16 sm:w-24 md:w-32 rounded-full mt-10 sm:mr-20 md:mr-32'>
+              <div data-aos="zoom-in-left" data-aos-easing="linear" data-aos-duration="800" data-aos-offset="0" className='react-box bg-white w-16 sm:w-24 md:w-32 rounded-full mt-10 sm:mr-20 md:mr-32'>
                 <Image src={"/assets/react.png"} alt='react.js' width={100} height={100} loading='lazy' className='react-img w-16 sm:w-24 md:w-32 p-2 sm:p-3 md:p-4' />
+                {/* <Image src={"/assets/mongoDB.png"} alt='mongoDB' width={100} height={100} loading='lazy' className='react-img w-16 sm:w-24 md:w-32 p-2 sm:p-3 md:p-4' /> */}
               </div>
             </div>
 

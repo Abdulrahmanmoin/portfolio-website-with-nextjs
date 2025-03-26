@@ -9,12 +9,9 @@ const poppins = Poppins({
     subsets: ['latin'],
 });
 
-
-
-
 const Header = () => {
 
-    const navItems = ["home", "about", "projects", "skills", "testimonials", "contact"]
+    const navItems = ["home", "about", "services", "projects", "skills", "contact"]
 
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -64,39 +61,24 @@ const Header = () => {
                         </div>
                         <div className="flex flex-1 items-center justify-center lg:items-stretch lg:justify-between px-4">
                             {/* LOGO */}
-                            <div className="flex flex-shrink-0 items-center text-black">
+                            <div className="flex flex-shrink-0 items-center justify-center text-black">
                                 <h1 className={`navbar-brand-name ${poppins.className} text-xl sm:text-2xl font-extrabold`}>Abdul <span className='text-blue-700'> Rahman </span> Moin</h1>
                             </div>
 
 
-                            <div className="hidden lg:block lg:ml-20
-                            ">
-                                <ul className="flex space-x-10 items-center text-gray-600 text-sm mr-9">
+                            <div className="hidden lg:block self-center">
+                                <ul className="flex space-x-2 text-gray-600 text-xs">
 
                                     {navItems.map(item => (
                                         <>
-                                            {!(item == "about" || item == "contact") &&
-                                                < li key={item}>
-                                                    <Link
-                                                        href={`/#${item}`}
-                                                        className='uppercase rounded-md px-3 py-2  font-medium  hover:bg-blue-700 hover:text-white'
-                                                    >
-                                                        {item}
-                                                    </Link>
-                                                </li >
-                                            }
-
-
-                                            {(item == "about" || item == "contact") &&
-                                                < li key={item}>
-                                                    <Link
-                                                        href={`${item}`}
-                                                        className='uppercase rounded-md px-3 py-2  font-medium  hover:bg-blue-700 hover:text-white'
-                                                    >
-                                                        {item}
-                                                    </Link>
-                                                </li>
-                                            }
+                                            < li key={item}>
+                                                <Link
+                                                    href={`/#${item}`}
+                                                    className='uppercase rounded-md px-3 py-2  font-medium  hover:bg-blue-700 hover:text-white'
+                                                >
+                                                    {item}
+                                                </Link>
+                                            </li >
                                         </>
                                     ))}
 
@@ -113,30 +95,16 @@ const Header = () => {
                     <ul className="space-y-4 px-2 pb-3 pt-2 text-gray-600 text-sm">
 
                         {navItems.map(item => (
-                           <>
-                           {!(item == "about" || item == "contact") &&
-                               < li key={item}>
-                                   <Link
-                                       href={`/#${item}`}
-                                       className='uppercase rounded-md px-3 py-2  font-medium  hover:bg-blue-700 hover:text-white'
-                                   >
-                                       {item}
-                                   </Link>
-                               </li >
-                           }
-
-
-                           {(item == "about" || item == "contact") &&
-                               < li key={item}>
-                                   <Link
-                                       href={`${item}`}
-                                       className='uppercase rounded-md px-3 py-2  font-medium  hover:bg-blue-700 hover:text-white'
-                                   >
-                                       {item}
-                                   </Link>
-                               </li>
-                           }
-                       </>
+                            <>
+                                < li key={item}>
+                                    <Link
+                                        href={`/#${item}`}
+                                        className='uppercase rounded-md px-3 py-2  font-medium  hover:bg-blue-700 hover:text-white'
+                                    >
+                                        {item}
+                                    </Link>
+                                </li >
+                            </>
                         ))}
 
                     </ul>

@@ -55,7 +55,7 @@ const Skill = () => {
                         <div
                             key={item.title}
                             data-aos="zoom-in-up"
-                            data-aos-offset="0"
+                            // data-aos-offset="200"
                             data-aos-anchor-placement="center-bottom"
                             data-aos-duration="400"
 

@@ -1,79 +1,61 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import ProjectCard from './ProjectCard'
 import SocialIcons from './SocialIcons'
 import { Button } from './ui/button'
 
 const Projects = () => {
 
-  const [btnCategory, setBtnCategory] = useState("Next.js")
+  const [btnCategory, setBtnCategory] = useState("Next.js (Full Stack)")
+  const [categories, setCategories] = useState([
+    {
+      categoryName: "Next.js (UI only)",
+      bgColor: "bg-gray-200 text-black"
+    },
+    {
+      categoryName: "Next.js (Full Stack)",
+      bgColor: "bg-blue-800 text-white"
+    },
+    {
+      categoryName: "All",
+      bgColor: "bg-gray-200 text-black"
+    }
+  ])
 
-  useEffect(() => {
-
-  }, [btnCategory])
-
-
-
-  const categories = ["React.js", "Next.js", "Bootstrap", "HTML & CSS", "All"]
 
   const projectSecData = [
     {
-      title: "Practice Portfolio Website",
-      category: "Bootstrap",
-      description: "A personal portfolio site created to hone skills in HTML, CSS, Bootstrap, and JavaScript. Built as a practice project to experiment with responsive layouts and interactive design elements.",
-      imageSrc: "/assets/PracticePortfolioWebsite.png",
-      githubLink: "https://github.com/Abdulrahmanmoin/Portfolio-Website",
-      liveDemoLink: "https://connectwithabdulrahman.vercel.app/"
-    },
-
-    {
-      title: "Amazon Clone",
-      category: "HTML & CSS",
-      description: "A static e-commerce website inspired by Amazon, made with HTML and CSS. This was my first website, created to practice CSS and build a basic layout with product listings and navigation.",
-      imageSrc: "/assets/AmazonWebsite.png",
-      githubLink: "https://github.com/Abdulrahmanmoin/Amazon-Clone",
-      liveDemoLink: "https://leafy-daffodil-d2e028.netlify.app/"
-    },
-    {
-      title: "Blog Site",
-      category: "React.js",
-      description: " A feature-rich blog platform built with Vite, React, and AppWrite's services, incorporating CRUD operations for managing posts. This project includes an integrated RTE editor",
-      imageSrc: "/assets/blogSite.png",
-      githubLink: "https://github.com/Abdulrahmanmoin/blog-site-with-react-and-appwrite",
-      liveDemoLink: "https://blog-site-with-react-and-appwrite.vercel.app/"
-    },
-    {
-      title: "E-Commerce Site",
-      category: "React.js",
-      description: " An e-commerce platform built with API integration to display product data. Includes category-based data fetching and filtering, allowing users to view specific categories like men's clothing.",
-      imageSrc: "/assets/e-commerce-site-with-react.png",
-      githubLink: "https://github.com/Abdulrahmanmoin/e-commerce-site-with-react",
-      liveDemoLink: "https://e-commerce-site-with-react.vercel.app/"
-    },
-    {
-      title: "Weather App",
-      category: "HTML & CSS",
-      description: "A weather information tool built with HTML, CSS, and JavaScript that lets users check the humidity, temperature, and wind speed of their favorite city by typing its name. This project integrates the Weather API to display real-time weather data.",
-      imageSrc: "/assets/weatherApp.png",
-      githubLink: "https://github.com/Abdulrahmanmoin/Weather-App",
-      liveDemoLink: "https://radiant-brigadeiros-9de527.netlify.app/"
-    },
-    {
-      title: "Joke Fetcher",
-      category: "React.js",
-      description: "Joke Fetcher — A simple React app built with Vite that fetches and displays jokes from an API. This project demonstrates API integration and dynamic content rendering on the page.",
-      imageSrc: "/assets/getJokeswithReact.png",
-      githubLink: "https://github.com/Abdulrahmanmoin/Get-Jokes",
-      liveDemoLink: "https://get-jokes-with-react.vercel.app/"
-    }
-    , {
       title: "Learning Studio",
-      category: "Next.js",
+      category: "Next.js (UI only)",
       description: "A learning platform built with Next.js as my first project with this framework. Implemented app routing and styled the interface using Aceternity UI for a polished look with enhanced components.",
       imageSrc: "/assets/learningStudio.png",
       githubLink: "https://github.com/Abdulrahmanmoin/learning-studio-with-nextjs",
       liveDemoLink: "https://learning-studio-with-nextjs.vercel.app/"
+    },
+    {
+      title: "Faceless Messages",
+      category: "Next.js (Full Stack)",
+      description: "Faceless Messages is a full-stack application developed using Next.js, enabling anonymous messaging in a secure and intuitive environment. Built with MongoDB for data storage and Next Auth for authentication.",
+      imageSrc: "/assets/facelessMessages.png",
+      githubLink: "https://github.com/Abdulrahmanmoin/anonymous-message-nextjs",
+      liveDemoLink: "https://faceless-message.vercel.app/"
+    },
+    {
+      title: "Car Rental Website",
+      category: "Next.js (UI only)",
+      description: "Morent is a modern car rental platform built with Next.js. It offers a sleek UI and efficient state management for a smooth browsing experience. Users can explore cars with a responsive and intuitive design.",
+      imageSrc: "/assets/morent.png",
+      githubLink: "https://github.com/Abdulrahmanmoin/anonymous-message-nextjs",
+      liveDemoLink: "https://morent-car-rental-ar.vercel.app/"
+    },
+    {
+      title: "The Twitter Clone",
+      category: "Next.js (Full Stack)",
+      description: "Twitter Clone is a full-stack social media app built with Next.js. It features user authentication, real-time posts, and interactive engagement for a seamless experience. Designed with a clean UI and smooth performance.",
+      imageSrc: "/assets/twitter.png",
+      githubLink: "https://github.com/Abdulrahmanmoin/twitter-next.js",
+      liveDemoLink: "https://twitterzone.vercel.app/"
     }
   ]
 
@@ -86,9 +68,21 @@ const Projects = () => {
     liveDemoLink: string
   }
 
+  const handleSelectedButtonBgColor = (categoryName: string) => {
+    setBtnCategory(categoryName)
+
+    setCategories(prevCategories =>
+      prevCategories.map(category =>
+        category.categoryName === categoryName
+          ? { ...category, bgColor: "bg-blue-800 text-white" } // Change the clicked button's color
+          : { ...category, bgColor: "bg-gray-200 text-black" } // Reset other buttons' colors
+      )
+    )
+
+  }
 
   return (
-    <section id='projects' className='bg-white'>
+    <section id='projects' className='pb-20 bg-white'>
       <div>
         <div className='flex flex-col items-center justify-center'>
           <h2 className='capitalize text-4xl sm:text-5xl font-bold py-20 text-center leading-[4rem]'>My Creative  <span className='text-blue-800'> Portfolio </span> Section </h2>
@@ -98,15 +92,15 @@ const Projects = () => {
           <div className='flex gap-14 flex-wrap justify-center'>
             {categories.map(category => (
               <Button
-                key={category}
+                key={category.categoryName}
                 variant="outline"
-                onClick={() => setBtnCategory(category)}
-                className='bg-gray-200 text-black border-[1px] border-black hover:bg-blue-800 hover:text-white font-semibold px-7 py-3 rounded-xl '
-              >{category}</Button>
+                onClick={() => handleSelectedButtonBgColor(category.categoryName)}
+                className={`${category.bgColor} border-[1px] border-black hover:bg-blue-800 hover:text-white font-semibold px-7 py-3 rounded-xl `}
+              >{category.categoryName}</Button>
             ))}
           </div>
 
-          <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-14 gap-y-14 mt-6 mx-8 sm:mx-8  md:mx-20 lg:mx-14'>{((btnCategory === "All")) &&
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-14 gap-y-14 mt-6 mx-8 sm:mx-8  md:mx-20 lg:mx-14'>{((btnCategory === "All")) &&
             projectSecData.map((item: ProjectData) => (
               <ProjectCard
                 key={item.title}
@@ -114,7 +108,7 @@ const Projects = () => {
             ))}
           </div>
 
-          <div className='grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-14 gap-y-14 mt-6 mx-8 md:mx-20 lg:mx-14 '>{(!(btnCategory === "All")) &&
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-14 gap-y-14 mt-6 mx-8 md:mx-20 lg:mx-14'>{(!(btnCategory === "All")) &&
             (projectSecData.filter(((arr: { category: string }) => (arr.category === btnCategory))))
               .map((item: ProjectData) => (
                 <ProjectCard

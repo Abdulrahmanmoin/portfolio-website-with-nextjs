@@ -83,10 +83,15 @@ body {
 }
 
 
-@media screen and (min-width: 426px) and (max-width: 639px){
+@media screen and (min-width: 427px) and (max-width: 639px){
   .my-image {
     width: 50%;
   }
+
+  .tech-stacks-container{
+    margin-left: 0;
+  }
+
 }
 
 @media screen and (max-width: 426px) {
@@ -94,11 +99,14 @@ body {
   .tech-stack-and-mid-ball-div {
     grid-template-columns: repeat(2, 6rem);
     column-gap: 100px;
-    /* margin-left: 30px; */
   }
 
   .tailwind-box {
     display: none;
+  }
+
+  .nextjs-box{
+    margin-right: 40px;
   }
 }
 
@@ -178,6 +186,10 @@ body {
 
  .navbar-brand-name{
   font-size: 1rem 
+ }
+
+ .tech-stacks-container{
+  margin-left: 25px;
  }
 
 }

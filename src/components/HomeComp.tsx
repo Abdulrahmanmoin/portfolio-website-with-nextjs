@@ -19,8 +19,8 @@ const HomeComp = () => {
                 <span className='text-4xl'>👋</span>
               </div>
               <div>
-                <p className='text-gray-500 text-sm'>Hello, I am</p>
-                <h2 className='intro-box-name-heading text-xl font-bold'>Abdul Rahman Moin</h2>
+                <h1 className='text-gray-500 text-sm'>Hello, I am</h1>
+                <h1 className='intro-box-name-heading text-xl font-bold'>Abdul Rahman Moin</h1>
               </div>
             </div>
           </AOSWrapper>

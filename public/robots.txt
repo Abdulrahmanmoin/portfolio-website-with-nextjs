@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://abdulrahman-dev.vercel.app
+
+# Sitemaps
+Sitemap: https://abdulrahman-dev.vercel.app/sitemap.xml

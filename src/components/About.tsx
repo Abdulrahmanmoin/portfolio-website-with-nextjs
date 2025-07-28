@@ -26,20 +26,24 @@ const About = () => {
                                     data-aos="fade-left"
                                     data-aos-duration="800"
                                     data-aos-offset="100"
-                                >I&apos;m a <strong>Next.js developer</strong> specializing in building <strong>scalable, high-performance web applications.</strong> I help businesses create <em>fast, SEO-friendly, and maintainable web solutions</em> using modern technologies like  <strong>TypeScript, Mongoose, MongoDB, Tailwind CSS, Shadcn UI, and Aceternity UI.</strong></p>
+                                >I&apos;m a <strong>MERN Stack developer</strong> with practical experience in building <strong>full-stack web applications</strong> using <strong>React.js, Express.js, Node.js, MongoDB</strong> and advanced <em> frameworks </em>like <strong>Next.js</strong> for <em>server-side rendering</em> and <em> SEO-friendly solutions</em>                                     I also work with <strong>TypeScript, JavaScript, Tailwind CSS, ShadCN UI, Aceternity UI,</strong> and <em>authentication tools</em> like <strong>NextAuth. </strong> </p>
                                 <p
                                     data-aos="fade-left"
                                     data-aos-duration="800"
                                     data-aos-offset="100"
-                                >I focus on <strong>RESTful APIs</strong>, efficient <strong>database design</strong>, and optimized <strong>UI/UX</strong>, ensuring that every project is <em>responsive, secure, and built for growth</em>. Whether it&apos;s an <strong>e-commerce platform</strong>, <strong>SaaS application</strong>, or a <strong>custom business solution</strong>, I deliver <strong>clean, maintainable, and production-ready code</strong>.</p>
+                                >
+                                    I <em>build clean, scalable, and high-performing applications </em> that deliver an excellent user experience. My work combines strong <strong> backend logic </strong> with <strong> responsive frontend designs.</strong>
+                                </p>
                                 <p
                                     data-aos="fade-left"
                                     data-aos-duration="800"
                                     data-aos-offset="100"
-                                >If you&apos;re looking for a <strong>skilled Next.js developer</strong> to <em>bring your ideas to life,</em> let&apos;s connect and build something great together!</p>
-
+                                >
+                                    {/* If you&apos;re looking for a <strong>skilled Next.js developer</strong> to <em>bring your ideas to life,</em> let&apos;s connect and build something great together! */}
+                                    Right now, <strong>OPEN to opportunities </strong> to build <strong>impactful products</strong> and <strong>contribute</strong> to <strong>great teams.</strong>
+                                </p>
                                 <a
-                                    href="/assets/resume_abdul_rahman_moin_Next.js_developer.pdf"
+                                    href="/assets/resume_abdul_rahman_moin_mern-stack_developer.pdf"
                                     download
                                     data-aos="fade-left"
                                     data-aos-duration="800"

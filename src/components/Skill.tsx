@@ -6,42 +6,46 @@ const Skill = () => {
 
     const skillsData = [
         {
-            title: "Tailwind CSS",
-            imageSrc: "/assets/tailwind.png"
+            title: "React.js",
+            imageSrc: "/assets/react.png"
         },
         {
             title: "Next.js",
             imageSrc: "/assets/nextjs.png"
         },
         {
-            title: "Typescript",
-            imageSrc: "/assets/typescript.png"
+            title: "Express.js",
+            imageSrc: "/assets/express.png"
         },
         {
-            title: "Git",
-            imageSrc: "/assets/git.png"
+            title: "Typescript",
+            imageSrc: "/assets/typescript.png"
         },
         {
             title: "Mongo DB",
             imageSrc: "/assets/mongoDB.png"
         },
         {
+            title: "Node.js",
+            imageSrc: "/assets/nodejs.png"
+        },
+        {
+            title: "Git",
+            imageSrc: "/assets/git.png"
+        },
+        {
+            title: "Tailwind CSS",
+            imageSrc: "/assets/tailwind.png"
+        },
+        {
             title: "Shadcn UI",
             imageSrc: "/assets/shadcnUi.png"
         },
         {
-            title: "React.js",
-            imageSrc: "/assets/react.png"
-        },
-        {
-            title: "Next Auth",
-            imageSrc: "/assets/nextAuth.png"
-        },       
-        {
             title: "Aceternity UI",
             imageSrc: "/assets/aceternityUI.png"
         },
-        
+
     ]
 
     return (
